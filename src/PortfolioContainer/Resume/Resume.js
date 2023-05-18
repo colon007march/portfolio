@@ -32,6 +32,7 @@ const Resume = (props) => {
       <div className="resume-heading">
         <div className="resume-main-heading">
           <div className="heading-bullet"></div>
+          {/* <div className="info-heading"> */}
           <span>{props.heading ? props.heading : ""}</span>
           {props.fromDate && props.toDate ? (
             <div className="heading-date">
@@ -40,6 +41,7 @@ const Resume = (props) => {
           ) : (
             <div></div>
           )}
+          {/* </div> */}
         </div>
         <div className="resume-sub-heading">
           <span>{props.subHeading ? props.subHeading : ""}</span>
@@ -163,6 +165,10 @@ const Resume = (props) => {
 
   const certificateOrActivity = [
     {
+      title: "Github",
+      description: "https://github.com/pkasinpoj",
+    },
+    {
       title: "TBWG Blockchain Hackathon",
       description:
         "Participate in a competition to present a concept for utilizing blockchain technology and receive training in the Solidity programming language during the event in 2020",
@@ -180,11 +186,11 @@ const Resume = (props) => {
         "https://www.udemy.com/certificate/UC-9141c259-22e7-4564-ad16-33afb27512ba/",
       // subHeading: "Technologies Used: Flutter,graphql",
     },
-    {
-      title: "Toeic Test in 2021",
-      description: "My Score : Listening 345 Reading 205",
-      // subHeading: "Technologies Used: Flutter,graphql",
-    },
+    // {
+    //   title: "Toeic Test in 2021",
+    //   description: "My Score : Listening 345 Reading 205",
+    //   // subHeading: "Technologies Used: Flutter,graphql",
+    // },
   ];
 
   const resumeDetails = [
@@ -219,7 +225,6 @@ const Resume = (props) => {
             English language teaching website.
           </span>
         </div>
-
         <ResumeHeading
           heading={"Graduation Project"}
           subHeading={"Backend Developer"}
@@ -255,17 +260,17 @@ const Resume = (props) => {
         <ResumeHeading
           heading={"Government Housing Bank"}
           subHeading={"IT Risk Management"}
-          fromDate={"12/2021"}
+          fromDate={"12/2020"}
           toDate={"Present"}
         />
         <div className="experience-description">
           <span className="resume-description-text">
             I oversee multiple systems as a system administrator and develop
-            various systems, such as a chatbot and a membership system. I create
-            a website to monitor task progress using HTML, JavaScript, CSS,
-            .NET, and SQL Server. I also develop a dashboard with analytical
-            data from SQL Server, utilizing Power BI with Power M Query, DAX,
-            and SQL Server
+            various systems, such as a chatbot and a membership system by Google
+            Apps Script. I create a website to monitor task progress using HTML,
+            JavaScript, CSS, .NET, and SQL Server. I also develop a dashboard
+            with analytical data from SQL Server, utilizing Power BI with Power
+            M Query, DAX, and SQL Server
           </span>
         </div>
         <ResumeHeading
@@ -351,7 +356,7 @@ const Resume = (props) => {
   ];
 
   const handleCarousal = (index) => {
-    let offsetHeight = 425;
+    let offsetHeight = 520;
 
     let newCarousalOffset = {
       style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
